@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BrahjadonBlog</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+<h1>BrahjadonBlog</h1>
+
+<nav>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+I am a passionate and dedicated technology professional with strong
+expertise in Website Development, Software Development, Video
+Animation, Artificial Intelligence, Microsoft Office Activation, and
+Operating System Installations.
+</p>
+
+<p>
+Over the years, I have developed skills in designing and building
+modern websites, developing useful software applications, and
+creating visually engaging digital media.
+</p>
+
+<p>
+In the field of web development, I specialize in building responsive,
+fast, and user-friendly websites using modern technologies.
+</p>
+
+<p>
+As a software developer, I create applications that automate tasks,
+improve productivity, and solve real-world problems.
+</p>
+
+<p>
+My interest in Artificial Intelligence drives me to explore smart
+technologies that can automate processes and improve digital services.
+</p>
+
+<p>
+I also have strong experience in Video Animation and Digital Media
+Production.
+</p>
+
+<h3>Technical Services</h3>
+
+<ul>
+<li>Website Development</li>
+<li>Software Development</li>
+<li>Artificial Intelligence Technologies</li>
+<li>Video Animation and Multimedia Editing</li>
+<li>Microsoft Office Installation and Activation</li>
+<li>Windows and Linux Operating System Installation</li>
+<li>Computer System Maintenance and Troubleshooting</li>
+<li>Basic Cybersecurity and System Protection</li>
+<li>Website Deployment and Hosting</li>
+<li>Technical Support and IT Consulting</li>
+</ul>
+
+</section>
+
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<ul>
+<li>Website development for local business</li>
+<li>AI recommendation software</li>
+<li>Educational animation videos</li>
+</ul>
+
+</section>
+
+
+<section id="contact">
+
+<h2>Contact Me</h2>
+
+<form method="POST">
+
+{{ form.hidden_tag() }}
+
+<label>Name</label><br>
+{{ form.name }}<br><br>
+
+<label>Email</label><br>
+{{ form.email }}<br><br>
+
+<label>Message</label><br>
+{{ form.message }}<br><br>
+
+{{ form.submit() }}
+
+</form>
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<p class="flash">{{ message }}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<br>
+
+<p>
+Phone:
+<a href="tel:+233559714937">+233 55 971 4937</a>
+</p>
+
+<p>
+Email:
+<a href="mailto:brahjadon@gmail.com">brahjadon@gmail.com</a>
+</p>
+
+</section>
+
+
+<footer>
+<p>&copy; 2026 BrahjadonBlog</p>
+</footer>
+
+</body>
+</html>
